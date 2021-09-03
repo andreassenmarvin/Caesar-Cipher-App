@@ -25,7 +25,7 @@ public class Decrypt {
 
     public boolean isString(){
         for (int index = 0; index < this.mText.length(); index++){
-            if (this.mText.charAt(index) >= '0' && this.mText.charAt(i) <= '9'){
+            if (this.mText.charAt(index) >= '0' && this.mText.charAt(index) <= '9'){
                 System.out.println("Expected characters or words");
                 return false;
             }
@@ -36,16 +36,16 @@ public class Decrypt {
     public String backward(){
         char[] newCharText = mText.toCharArray();
 
-        for (int i = 0; i < newCharText.length; i++){
+        for (int index = 0; index < newCharText.length; index++){
 
-            if (Character.isUpperCase(newCharText[i])){
-                int castText = ((int) newCharText[i] - 65 - this.mKey) % 26 + 65;
-                newCharText[i] = (char)castText;
+            if (Character.isUpperCase(newCharText[index])){
+                int castText = ((int) newCharText[index] - 65 - this.mKey) % 26 + 65;
+                newCharText[index] = (char)castText;
             }
 
-            else if (Character.isLowerCase(newCharText[i])){
-                int castText = ((int) newCharText[i] - 97 - this.mKey) % 26 + 97;
-                newCharText[i] = (char)castText;
+            else if (Character.isLowerCase(newCharText[index])){
+                int castText = ((int) newCharText[index] - 97 - this.mKey) % 26 + 97;
+                newCharText[index] = (char)castText;
             }
         }
 

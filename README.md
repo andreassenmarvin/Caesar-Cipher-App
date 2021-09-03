@@ -32,4 +32,4 @@ provides the option to either encode or decode it using a key.
 Incase of any contributions,query or issues,you can reach me through the email below:
 **machariamarvin625@gmail.com**
 ### License
-This project is licensed under the [MIT License](https://github.com/marvinandreassen/Caesar-Cipher-App/blob/master/License)
+This project is licensed under the [MIT License](https://github.com/andreassenmarvin/Caesar-Cipher-App/blob/master/LICENSE.txt)

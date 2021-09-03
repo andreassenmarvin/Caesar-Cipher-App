@@ -9,7 +9,7 @@ public class Encrypt {
 
     public boolean isString(){
         for (int index = 0; index < this.mText.length(); index++){
-            if (this.mText.charAt(index) >= '0' && this.mText.charAt(i) <= '9'){
+            if (this.mText.charAt(index) >= '0' && this.mText.charAt(index) <= '9'){
                 System.out.println("Expected characters or words");
                 return false;
             }

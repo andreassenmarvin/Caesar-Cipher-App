@@ -1,5 +1,3 @@
-import java.io.BufferedReader;
-import java.io.Console;
 import java.util.Scanner;
 
 public class App {
@@ -11,42 +9,50 @@ public class App {
         boolean loopRunning = true;
 
         while(loopRunning){
-            System.out.println("Have fun interacting with the app");
-            System.out.println("Enter either of the options to proceed");
-            System.out.print("1. Encrypt text:");
-            System.out.println("2. Decrypt text:");
+            System.out.println("---------------------------------------------");
+            System.out.println("WELCOME TO CAESAR CYPHER APP; HAVE FUN!");
+            System.out.println("---------------------------------------------");
+            System.out.println("Enter either of the options below to proceed:");
+            System.out.println("1. Encrypt text.");
+            System.out.println("2. Decrypt text.");
+            System.out.println("Enter 0 to exit:");
+            System.out.println("0. Exit.");
+            System.out.println("---------------------------------------------");
             Scanner newScanner = new Scanner(System.in);
             int option = newScanner.nextInt();
+
 
             if (option == 1){
                 System.out.println("Let's encrypt your text");
                 newScanner.nextLine();
                 System.out.println("Enter Text:");
                 String text = newScanner.nextLine();
-
+                System.out.println("-------------------------------------------");
                 System.out.println("Enter decryption key between 1 to 25:");
                 Integer key = Integer.parseInt(newScanner.nextLine());
 
                 Encrypt newEncryption = new Encrypt(text, key);
-                System.out.print("Enter either of the options to proceed: ");
 
                 if(!newEncryption.isString()){
                     System.out.println("Invalid Entry");
                 }
 
                 if (!newEncryption.isInRange()){
-                    System.out.println("Key Range is between 1 and 25");
+                    System.out.println("Your key is out of range.Please try again.");
                 }
 
-                String encryptedText = newEncryption.forward();
-                System.out.println(String.format("Your encrypted text is: %s", encryptedText));
+                else {
+                    String encryptedText = newEncryption.forward();
+                    System.out.println(String.format("Your encrypted text is: %s", encryptedText + "."));
+                }
 
             }
-            else if (choice == 2){
+            else if (option == 2){
                 System.out.println("Let's decrypt your text");
                 newScanner.nextLine();
                 System.out.println("Enter Text:");
                 String text = newScanner.nextLine();
+                System.out.println("-------------------------------------------");
                 System.out.println("Enter any key between 1 to 25:");
                 Integer key = Integer.parseInt(newScanner.nextLine());
 
@@ -57,18 +63,18 @@ public class App {
                 }
 
                 if (!newEncryption.isInRange()){
-                    System.out.println("Key Range is between 1 and 25");
+                    System.out.println("Your key is out of range.Please try again.");
                 }
 
-                String encryptedText = newEncryption.forward();
-
-                Decrypt newDecryption = new Decrypt(encryptedText, key);
-
-                String deryptedText = newDecryption.backward();
-                System.out.println(String.format("Your decrypted text is: %s", deryptedText));
+                else {
+                    String encryptedText = newEncryption.forward();
+                    Decrypt newDecryption = new Decrypt(encryptedText, key);
+                    String deryptedText = newDecryption.backward();
+                    System.out.println(String.format("Your decrypted text is: %s", deryptedText + "."));
+                }
             }
 
-            else if (choice == 3){
+            else if (option == 0){
                 System.out.println("Exit");
                 loopRunning=false;
             }else if (option > 3 || option < 3){

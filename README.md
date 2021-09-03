@@ -5,9 +5,13 @@ provides the option to either encode or decode it using a key.
 #### By **Marvin Macharia**
 ## Description
 ![Webapp image](src/Images/README/s1.png)
+<br>
 ![Webapp image](src/Images/README/s2.png)
+<br>
 ![Webapp image](src/Images/README/s3.png)
+<br>
 ![Webapp image](src/Images/README/s4.png)
+<br>
 ## Setup/Installation Requirements
 * Fork/Clone the repository
 ```

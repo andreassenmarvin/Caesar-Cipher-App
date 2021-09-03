@@ -1,9 +1,13 @@
 # CAESAR-CIPHER-APP
-This is a web-app that allows the user to enter a quote and the author and it proceeds to generate it allowing other users to either vote or downvote the quote.
+This is a web-app that prompts the user to enter a text and 
+provides the option to either encode or decode it using a key.
 
 #### By **Marvin Macharia**
 ## Description
-![Webapp image](/src/assets/README/s1.png)
+![Webapp image](src/Images/README/s1.png)
+![Webapp image](src/Images/README/s2.png)
+![Webapp image](src/Images/README/s3.png)
+![Webapp image](src/Images/README/s4.png)
 ## Setup/Installation Requirements
 * Fork/Clone the repository
 ```
@@ -24,4 +28,4 @@ This is a web-app that allows the user to enter a quote and the author and it pr
 Incase of any contributions,query or issues,you can reach me through the email below:
 **machariamarvin625@gmail.com**
 ### License
-This project is licensed under the [MIT License](https://github.com/marvinandreassen/Quotes-app     /blob/master/LICENSE)
+This project is licensed under the [MIT License](https://github.com/marvinandreassen/Caesar-Cipher-App/blob/master/LICENSE)
